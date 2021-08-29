@@ -1,7 +1,7 @@
 body {
   background-color: #FFDFBF;
   color: #74665F;
-  width: 480px;
+  width: 400px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -11,3 +11,12 @@ button {
   background-color: #D67D7D;
   border-style: none;
 }
+
+/*
+https://www.schemecolor.com/vintage-direction.php
+
+68B7A8
+FFEDBE
+D67D7D
+74665F
+*/

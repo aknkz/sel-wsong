@@ -1,7 +1,8 @@
 'use strict';
 
 //"ランダムで曲を決める"ボタン
-const selectSong = document.getElementById('select-song');
+const selectSong1 = document.getElementById('select-song1');
+const selectSong2 = document.getElementById('select-song2');
 
 //各シーン
 const doorOpenSel = document.getElementById('doorOpen');
@@ -16,8 +17,19 @@ const flowerSel = document.getElementById('flower');
 const finalSel = document.getElementById('final');
 
 
-//"ランダムで曲を決める"ボタンが押された時の動作
-selectSong.onclick = () => {
+//"ランダムで曲を決める"ボタン1が押された時の動作
+selectSong1.onclick = () => {
+
+  //前回選曲した表示をすべて削除する
+  delSongs();
+
+  //曲をランダムで選び表示する
+  chooseSong()
+
+}
+
+//"ランダムで曲を決める"ボタン2が押された時の動作
+selectSong2.onclick = () => {
 
   //前回選曲した表示をすべて削除する
   delSongs();
@@ -148,29 +160,148 @@ function chooseSong(){
   entMovie.innerText = "動画サイトで聴く";
   entSel.appendChild(entMovie)
 
-  /*
-  //ケーキ入刀
-  cake
 
-    //乾杯
-  cheers
+  //ケーキ入刀
+  let cakeNum = Math.floor( Math.random() * Object.keys(wedsong.cake).length);
+  const cakeSongArtist = wedsong.cake[cakeNum].artist;
+  const cakeSongTitle = wedsong.cake[cakeNum].title;
+  const cakeSong = cakeSongArtist + " / " + cakeSongTitle;
+
+  const cakeDisp = document.createElement('h5');
+  cakeDisp.innerText = cakeSong;
+  cakeSel.appendChild(cakeDisp);
+
+  const cakeSongMUrl = wedsong.cake[cakeNum].mUrl;
+  const cakeMovie = document.createElement('a');
+  cakeMovie.href = cakeSongMUrl;
+  cakeMovie.target = "_blank";
+  cakeMovie.innerText = "動画サイトで聴く";
+  cakeSel.appendChild(cakeMovie)
+
+
+  //乾杯
+  let cheersNum = Math.floor( Math.random() * Object.keys(wedsong.cheers).length);
+  const cheersSongArtist = wedsong.cheers[cheersNum].artist;
+  const cheersSongTitle = wedsong.cheers[cheersNum].title;
+  const cheersSong = cheersSongArtist + " / " + cheersSongTitle;
+
+  const cheersDisp = document.createElement('h5');
+  cheersDisp.innerText = cheersSong;
+  cheersSel.appendChild(cheersDisp);
+
+  const cheersSongMUrl = wedsong.cheers[cheersNum].mUrl;
+  const cheersMovie = document.createElement('a');
+  cheersMovie.href = cheersSongMUrl;
+  cheersMovie.target = "_blank";
+  cheersMovie.innerText = "動画サイトで聴く";
+  cheersSel.appendChild(cheersMovie)
+
+
 
   //お色直し中座
-  changeDress
+  let changeDressNum = Math.floor( Math.random() * Object.keys(wedsong.changeDress).length);
+  const changeDressSongArtist = wedsong.changeDress[changeDressNum].artist;
+  const changeDressSongTitle = wedsong.changeDress[changeDressNum].title;
+  const changeDressSong = changeDressSongArtist + " / " + changeDressSongTitle;
+
+  const changeDressDisp = document.createElement('h5');
+  changeDressDisp.innerText = changeDressSong;
+  changeDressSel.appendChild(changeDressDisp);
+
+  const changeDressSongMUrl = wedsong.changeDress[changeDressNum].mUrl;
+  const changeDressMovie = document.createElement('a');
+  changeDressMovie.href = changeDressSongMUrl;
+  changeDressMovie.target = "_blank";
+  changeDressMovie.innerText = "動画サイトで聴く";
+  changeDressSel.appendChild(changeDressMovie)
+
 
   //お色直し入場
-  reEnt
+  let reEntNum = Math.floor( Math.random() * Object.keys(wedsong.reEnt).length);
+  const reEntSongArtist = wedsong.reEnt[reEntNum].artist;
+  const reEntSongTitle = wedsong.reEnt[reEntNum].title;
+  const reEntSong = reEntSongArtist + " / " + reEntSongTitle;
+
+  const reEntDisp = document.createElement('h5');
+  reEntDisp.innerText = reEntSong;
+  reEntSel.appendChild(reEntDisp);
+
+  const reEntSongMUrl = wedsong.reEnt[reEntNum].mUrl;
+  const reEntMovie = document.createElement('a');
+  reEntMovie.href = reEntSongMUrl;
+  reEntMovie.target = "_blank";
+  reEntMovie.innerText = "動画サイトで聴く";
+  reEntSel.appendChild(reEntMovie)
+
 
   //エンドロール
-  endroll
+  let endrollNum = Math.floor( Math.random() * Object.keys(wedsong.endroll).length);
+  const endrollSongArtist = wedsong.endroll[endrollNum].artist;
+  const endrollSongTitle = wedsong.endroll[endrollNum].title;
+  const endrollSong = endrollSongArtist + " / " + endrollSongTitle;
+
+  const endrollDisp = document.createElement('h5');
+  endrollDisp.innerText = endrollSong;
+  endrollSel.appendChild(endrollDisp);
+
+  const endrollSongMUrl = wedsong.endroll[endrollNum].mUrl;
+  const endrollMovie = document.createElement('a');
+  endrollMovie.href = endrollSongMUrl;
+  endrollMovie.target = "_blank";
+  endrollMovie.innerText = "動画サイトで聴く";
+  endrollSel.appendChild(endrollMovie)
+
 
   //両親への手紙
-  letter
+  let letterNum = Math.floor( Math.random() * Object.keys(wedsong.letter).length);
+  const letterSongArtist = wedsong.letter[letterNum].artist;
+  const letterSongTitle = wedsong.letter[letterNum].title;
+  const letterSong = letterSongArtist + " / " + letterSongTitle;
+
+  const letterDisp = document.createElement('h5');
+  letterDisp.innerText = letterSong;
+  letterSel.appendChild(letterDisp);
+
+  const letterSongMUrl = wedsong.letter[letterNum].mUrl;
+  const letterMovie = document.createElement('a');
+  letterMovie.href = letterSongMUrl;
+  letterMovie.target = "_blank";
+  letterMovie.innerText = "動画サイトで聴く";
+  letterSel.appendChild(letterMovie)
 
   //両親への花束贈呈
-  flower 
+  let  flowerNum = Math.floor( Math.random() * Object.keys(wedsong. flower).length);
+  const  flowerSongArtist = wedsong. flower[ flowerNum].artist;
+  const  flowerSongTitle = wedsong. flower[ flowerNum].title;
+  const  flowerSong =  flowerSongArtist + " / " +  flowerSongTitle;
+
+  const  flowerDisp = document.createElement('h5');
+   flowerDisp.innerText =  flowerSong;
+   flowerSel.appendChild( flowerDisp);
+
+  const  flowerSongMUrl = wedsong. flower[ flowerNum].mUrl;
+  const  flowerMovie = document.createElement('a');
+   flowerMovie.href =  flowerSongMUrl;
+   flowerMovie.target = "_blank";
+   flowerMovie.innerText = "動画サイトで聴く";
+   flowerSel.appendChild( flowerMovie)
+
 
   //お披楽喜
-  final 
-*/
+  let finalNum = Math.floor( Math.random() * Object.keys(wedsong.final).length);
+  const finalSongArtist = wedsong.final[finalNum].artist;
+  const finalSongTitle = wedsong.final[finalNum].title;
+  const finalSong = finalSongArtist + " / " + finalSongTitle;
+
+  const finalDisp = document.createElement('h5');
+  finalDisp.innerText = finalSong;
+  finalSel.appendChild(finalDisp);
+
+  const finalSongMUrl = wedsong.final[finalNum].mUrl;
+  const finalMovie = document.createElement('a');
+  finalMovie.href = finalSongMUrl;
+  finalMovie.target = "_blank";
+  finalMovie.innerText = "動画サイトで聴く";
+  finalSel.appendChild(finalMovie)
+
 }
