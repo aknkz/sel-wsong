@@ -4,19 +4,22 @@
 
 const wedsong = {
 
-  //開場～ゲスト入場
+  //迎賓
   doorOpen :  [
     {
-      artist : "",
-      title : ""
+      artist : "葉加瀬太郎",
+      title : "エトピリカ",
+      mUrl : "https://youtu.be/oFUeDjcChTw"
     },
     {
-      artist : "doorOpenartist2",
-      title : "doorOpentitle2"
+      artist : "久石譲",
+      title : "Summer",
+      mUrl : "https://youtu.be/l0GN40EL1VU"
     },
     {
-      artist : "doorOpenartist3",
-      title : "doorOpentitle3"
+      artist : "Enya",
+      title : "Book Of Days",
+      mUrl : "https://youtu.be/LiBwr4U59EI"
     }
   ],
 
@@ -84,15 +87,16 @@ const wedsong = {
   }
   ],
 
-  //新郎新婦中座
+  //お色直し中座
   changeDress : [
     {
-    artist : "The Cranberries",
-    title : "Dreams"
+    artist : "Bruno Mars",
+    title : "Marry You",
+    mUrl: "https://youtu.be/dElRVQFqj-k"
   },
   {
-    artist : "cakeartist2",
-    title : "caketitle2"
+    artist : "The Cranberries",
+    title : "Dreams"
   },
   {
     artist : "entartist2",
@@ -148,7 +152,7 @@ const wedsong = {
   }
   ],
 
-  //花束贈呈
+  //両親への花束贈呈
   flowor : [
     {
     artist : "山口百恵",
