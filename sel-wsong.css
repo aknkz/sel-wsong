@@ -1,16 +1,79 @@
 body {
   background-color: #FFDFBF;
   color: #74665F;
-  width: 400px;
+  width: 380px;
   margin-right: auto;
   margin-left: auto;
 }
 
+p {
+  font-size: small;
+}
+
 button {
+  font-weight: bold;
+  font-size: medium;
+  color: #ffffff;
   padding: 10px 28px;
   background-color: #D67D7D;
   border-style: none;
+  border-radius: 10px 10px 10px 10px;
+  border-bottom: 5px solid #74665F;
 }
+
+a {
+  color:#68B7A8;
+  font-size: small;
+  }
+
+h2 {
+  position: relative;
+  padding: 0.5rem 2rem 0.5rem 4em;
+  background: #fff;
+}
+
+h2 span {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  display: inline-block;
+  width: 52px;
+  height: 20px;
+  text-align: center;
+  background: #D67D7D;
+}
+
+h2 span:before,
+h2 span:after {
+  position: absolute;
+  content: '';
+}
+
+h2 span:before {
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #74665F;
+}
+
+h2 span:after {
+  top: 50%;
+  left: 0;
+  display: block;
+  height: 50%;
+  border: 1em solid #D67D7D;
+  border-bottom-width: 15px;
+  border-bottom-color: transparent;
+}
+
+h2 span i {
+  position: relative;
+  z-index: 1;
+  color: #FFEDBE;
+}
+
+
 
 /*
 https://www.schemecolor.com/vintage-direction.php
